@@ -1,4 +1,0 @@
-
-function binaryTree(node) {
-
-}

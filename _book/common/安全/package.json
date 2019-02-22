@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "koa": "^2.7.0",
-    "koa-router": "^7.4.0"
-  },
-  "scripts": {
-    "start": "nodemon csrf.js"
-  }
-}
