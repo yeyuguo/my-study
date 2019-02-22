@@ -13,6 +13,7 @@
     * ✅ [http 的状态 ](common/http.md)
     * ❌ [cookie 和 session 的全面性知识]()
     * ❌ [xss 和 csrf 方法?](common/安全/webSafe.md)
+    * ❌ [待新增]()
 
 
 
@@ -23,7 +24,7 @@
         * ❌ [二叉树排序实现？]()
         * ❌ [二叉树:前序遍历(n log n) - 中序遍历( n ) - 后序遍历 (n log n ) 的具体]()
         * ❌ [js 十大算法](`performance/algorithm/十大算法.md`)
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
 
 
 
@@ -61,7 +62,7 @@
     * ❌ [querySelector 的集中查询结果对比](html/querySelector.md)
     * ❌ [函数式编程 vs 声明式编程？]()
     * ❌ [webRTC 原理]()
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
 
 
 
@@ -74,7 +75,7 @@
     * ❌ [css repain和reflow的机制（等同于上）👆](css/visibility和display引出repain、reflow概念.md)
     * ❌ [css 里的 BFC 概念](css/BFC概念.md)
     * ❌ [CSS预编译器以及PostCSS的工作原理]()
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
     
 
 
@@ -84,7 +85,7 @@
     * ❌ [documentFragment](html/documentFragment.md)
     * ❌ [script 加载方式  defer  async  vs 普通方式](html/defer-async.md)
     * ❌ [shadow DOM 概念和意义](html/shadowDOM.md)
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
     
 
 
@@ -93,7 +94,7 @@
 * [框架](Frame/README.md)
     * [React](Frame/React/README.md)
         * ❌ [React setState 全部周期]()
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
 
 
 
@@ -118,7 +119,7 @@
     * ❌ [lodash 的基本用法？]()
     * ❌ [虚拟 dom 对比的算法?]()
     * ❌ [小程序和h5的区别 ](common/小程序和h5的区别.md)
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
 
 
 

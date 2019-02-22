@@ -3,6 +3,17 @@
 该书的原则：  只学习一遍，不再回头
 坚持发散性思维，把各个技术都 扩展、深入  
 
+本地执行运行 gitbook
+```sh
+npm install -g gitbook
+
+gitbook install
+
+gitbook serve // 开发模式
+
+gitbook build // 发布模式
+```
+
 ## 大神外链
 - [魏双大神总结1](https://www.zybuluo.com/valsun/note/1318860)  
 - [魏双大神总结2](https://www.zybuluo.com/valsun/note/1321468)
@@ -15,12 +26,20 @@
 
 > 未完成的文章，可以使用添加类似 [xxxx](`xxx.md`) 的语法去除链接
 
+
+
+* [首页](README.md)
+
+
+
+
 * [公共知识](common/README.md)
     * ✅ [DNS 解析 ](common/DNS解析.md)
     * ✅ [tcp 协议过程](common/tcp.md)
     * ✅ [http 的状态 ](common/http.md)
     * ❌ [cookie 和 session 的全面性知识]()
     * ❌ [xss 和 csrf 方法?](common/安全/webSafe.md)
+    * ❌ [待新增]()
 
 
 
@@ -31,7 +50,7 @@
         * ❌ [二叉树排序实现？]()
         * ❌ [二叉树:前序遍历(n log n) - 中序遍历( n ) - 后序遍历 (n log n ) 的具体]()
         * ❌ [js 十大算法](`performance/algorithm/十大算法.md`)
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
 
 
 
@@ -69,7 +88,7 @@
     * ❌ [querySelector 的集中查询结果对比](html/querySelector.md)
     * ❌ [函数式编程 vs 声明式编程？]()
     * ❌ [webRTC 原理]()
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
 
 
 
@@ -82,7 +101,7 @@
     * ❌ [css repain和reflow的机制（等同于上）👆](css/visibility和display引出repain、reflow概念.md)
     * ❌ [css 里的 BFC 概念](css/BFC概念.md)
     * ❌ [CSS预编译器以及PostCSS的工作原理]()
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
     
 
 
@@ -92,7 +111,7 @@
     * ❌ [documentFragment](html/documentFragment.md)
     * ❌ [script 加载方式  defer  async  vs 普通方式](html/defer-async.md)
     * ❌ [shadow DOM 概念和意义](html/shadowDOM.md)
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
     
 
 
@@ -101,7 +120,7 @@
 * [框架](Frame/README.md)
     * [React](Frame/React/README.md)
         * ❌ [React setState 全部周期]()
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
 
 
 
@@ -126,7 +145,8 @@
     * ❌ [lodash 的基本用法？]()
     * ❌ [虚拟 dom 对比的算法?]()
     * ❌ [小程序和h5的区别 ](common/小程序和h5的区别.md)
-    * ❌ [cmd_amd_es]()
+    * ❌ [待新增]()
+
 
 
 
@@ -199,3 +219,7 @@
     lang:"javascript"
 ](xxx/xxxx.js)
 `
+
+
+
+
