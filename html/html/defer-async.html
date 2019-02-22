@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>验证 script defer async</title>
+</head>
+
+<body>
+    <p> 正常</p>
+    <script async>
+        alert('async')
+    </script>
+    <p>async 后</p>
+
+    <script defer>
+        alert('defer')
+    </script>
+    <p>defer 后</p>
+
+    <p>defer script 在 “正常“之前下载了资源，等 html 解析完后才加载的。</p>
+</body>
+
+</html>

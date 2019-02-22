@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>document 对象</title>
+</head>
+<style>
+    .body {
+        width: 100vw;
+    }
+
+    .left {
+        width: 30%;
+        text-align: right;
+        border: 1px solid #000;
+    }
+
+    .right {
+        border: 1px dotted #000;
+        width: 70%;
+        text-align: left;
+        padding: 0;
+    }
+
+    .com {
+        float: left;
+        /* overflow: auto; */
+        box-sizing: border-box;
+        border-bottom: none;
+    }
+
+    li {
+        height: 25px;
+        overflow: auto;
+        width: 100%;
+        display: inline-block;
+    }
+</style>
+
+<body>
+
+    <div class="body">
+
+        <div class="left com"></div>
+        <div class="right com"></div>
+    </div>
+    <script>
+        var uLeft = document.createElement('ul')
+        var uRight = document.createElement('ul')
+
+        let left = document.querySelector('.left')
+        let right = document.querySelector('.right')
+
+
+        // getProps(document)
+        getProps(window)
+
+        function getProps(obj) {
+            document.title = `${obj}`
+            for (let k in obj) {
+                let Left = document.createElement('li')
+                let lRight = document.createElement('li')
+                Left.innerText = `${k}`
+                let value = obj[k]
+                // document[k] && console.log("document[k][Symbol.toStringTag] == 'HTMLAllCollection': ", document[k][Symbol.toStringTag] ==
+                //     'HTMLAllCollection');
+                obj[k] && obj[k].__proto__.constructor.name && console.log(
+                    `${k}.__proto__.constructor.name : `,
+                    obj[k].__proto__
+                    .constructor.name);
+                let types = obj[k] && obj[k].constructor.name
+                let doc = `type:` + types + " <= "
+                //! 额外的业务处理，可以剔除
+                if (obj[k] && (obj[k].constructor.name == 'HTMLCollection' || obj[k].constructor.name ==
+                        'HTMLAllCollection')) {
+                    // todo 
+                    // lRight.innerHTML = Array.from(value)
+                    lRight.innerHTML = doc + Array.from(value)
+                } else {
+                    lRight.innerHTML = doc + value
+                }
+                uLeft.appendChild(Left)
+                uRight.appendChild(lRight)
+            }
+            left.appendChild(uLeft)
+            right.appendChild(uRight)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>垂直居中</title>
+    <style>
+        .common {
+            background: #fff;
+        }
+
+        /* 使用绝对定位来垂直居中 */
+        .container1::before {
+            padding-top: 100%;
+            display: inline-block;
+            content: '';
+        }
+
+        .container1 {
+            position: relative;
+            background-color: #333;
+            width: 300px;
+            height: inherit;
+        }
+
+
+
+        .center1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        /* 使用 table table-cell 垂直居中 */
+        .container2 {
+            display: table;
+            height: 300px;
+            width: 300px;
+            background-color: #333;
+        }
+
+        .center2 {
+            display: table-cell;
+            vertical-align: middle;
+            background: pink;
+            text-align: center;
+        }
+
+        /* flex 定位 */
+        .container3 {
+            background: greenyellow;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            /*水平居中*/
+            /* justify-content: center; */
+            /*让当前 元素水平居中*/
+
+            /*垂直居中*/
+            align-items: center;
+        }
+
+        .center3 {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 使用绝对定位来垂直居中 -->
+    <div class="container1">
+        <div class="common center1">使用绝对定位来垂直居中</div>
+    </div>
+    <!-- 使用 table table-cell 垂直居中 -->
+    <div class="container2">
+        <div class="common center2">
+            <p>使用 table 作为框子,孩子使用 table-cell</p>
+            <p>孩子充满整个父节点</p>
+        </div>
+    </div>
+    <!-- flex 定位居中 -->
+    <div class="container3">
+        <div class="common center3">
+            <p>使用 flex : align-item 垂直居中 </p>
+            <p>水平居中不是 justify-content: center;</p>
+            <p>水平居中:是对当前要素使用：margin:0 auto;</p>
+        </div>
+    </div>
+</body>
+
+</html>

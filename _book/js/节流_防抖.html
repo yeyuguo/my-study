@@ -1,0 +1,1631 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>js 节流_防抖 · 学习不回头</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yeyuguo">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="js模版引擎.html" />
+    
+    
+    <link rel="prev" href="继承.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.jianshu.page/" target="_blank" class="custom-link">域名在售</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://www.zybuluo.com/valsun/note/1318860" target="_blank" class="custom-link">魏双基础知识 合集1</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://www.zybuluo.com/valsun/note/1321468" target="_blank" class="custom-link">魏双基础知识 合集2</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../common/">
+            
+                <a href="../common/">
+            
+                    
+                    公共知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../common/DNS解析.html">
+            
+                <a href="../common/DNS解析.html">
+            
+                    
+                    DNS 解析 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../common/tcp.html">
+            
+                <a href="../common/tcp.html">
+            
+                    
+                    tcp 协议过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../common/http.html">
+            
+                <a href="../common/http.html">
+            
+                    
+                    http 的状态 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" >
+            
+                <span>
+            
+                    
+                    cookie 和 session 的全面性知识
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../common/安全/webSafe.html">
+            
+                <a href="../common/安全/webSafe.html">
+            
+                    
+                    xss 和 csrf 方法?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../performance/">
+            
+                <a href="../performance/">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../performance/前端性能优化/">
+            
+                <a href="../performance/前端性能优化/">
+            
+                    
+                    前端性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" >
+            
+                <span>
+            
+                    
+                    海量数据可视化技术及其性能优化
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../performance/algorithm/">
+            
+                <a href="../performance/algorithm/">
+            
+                    
+                    算法类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" >
+            
+                <span>
+            
+                    
+                    二叉树排序实现？
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" >
+            
+                <span>
+            
+                    
+                    二叉树:前序遍历(n log n) - 中序遍历( n ) - 后序遍历 (n log n ) 的具体
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="../`performance/algorithm/十大算法.md`">
+            
+                <span>
+            
+                    
+                    js 十大算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" >
+            
+                <span>
+            
+                    
+                    cmd_amd_es
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="函数作用域vs块级作用域.html">
+            
+                <a href="函数作用域vs块级作用域.html">
+            
+                    
+                    js 函数作用域(闭包) vs 块级作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" >
+            
+                <span>
+            
+                    
+                    js 的闭包优缺点
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="继承.html">
+            
+                <a href="继承.html">
+            
+                    
+                    js 继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.4" data-path="节流_防抖.html">
+            
+                <a href="节流_防抖.html">
+            
+                    
+                    js 节流_防抖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="js模版引擎.html">
+            
+                <a href="js模版引擎.html">
+            
+                    
+                    js模版引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="sizzle.html">
+            
+                <a href="sizzle.html">
+            
+                    
+                    sizzle dom 操作的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="XMLHttpRequest.html">
+            
+                <a href="XMLHttpRequest.html">
+            
+                    
+                    XMLHttpRequest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="cmd_amd_es.html">
+            
+                <a href="cmd_amd_es.html">
+            
+                    
+                    cmd_amd_es
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" >
+            
+                <span>
+            
+                    
+                    js 变量和函数等在 堆栈 的详细情况
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" >
+            
+                <span>
+            
+                    
+                    垃圾回收机制？
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="迭代器.html">
+            
+                <a href="迭代器.html">
+            
+                    
+                    迭代器 generater 的实现和操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" >
+            
+                <span>
+            
+                    
+                    frezze 的深度用法
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13" data-path="promise.html">
+            
+                <a href="promise.html">
+            
+                    
+                    promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14" >
+            
+                <span>
+            
+                    
+                    call、apply 实现 bind 操作
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.15" >
+            
+                <span>
+            
+                    
+                    URL.createObjectURL() 实际操作？
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16" >
+            
+                <span>
+            
+                    
+                    requestAnimationFrame 该知识点？
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.17" >
+            
+                <span>
+            
+                    
+                    URL.createObjectURL() 实际操作？
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18" data-path="requestAnimationFrame.html">
+            
+                <a href="requestAnimationFrame.html">
+            
+                    
+                    requestAnimationFrame
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.19" >
+            
+                <span>
+            
+                    
+                    Webpack 的打包原理和优化
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.20" >
+            
+                <span>
+            
+                    
+                    Node.js 的事件循环机制
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.21" >
+            
+                <span>
+            
+                    
+                    JS模块规范 CommonJS、AMD、CMD、UMD的区别
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.22" >
+            
+                <span>
+            
+                    
+                    export / import 的实现原理方式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.23" >
+            
+                <span>
+            
+                    
+                    Babel运行原理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.24" >
+            
+                <span>
+            
+                    
+                    Web端即时通讯技术
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.25" >
+            
+                <span>
+            
+                    
+                    冒泡的原理？为什么事件委托代理是利用的冒泡
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.26" >
+            
+                <span>
+            
+                    
+                    querySelector 的集中查询结果对比
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.27" >
+            
+                <span>
+            
+                    
+                    静态函数和实例函数的区别
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.28" data-path="../html/querySelector.md">
+            
+                <span>
+            
+                    
+                    querySelector 的集中查询结果对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.29" >
+            
+                <span>
+            
+                    
+                    函数式编程 vs 声明式编程？
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.30" >
+            
+                <span>
+            
+                    
+                    webRTC 原理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.31" >
+            
+                <span>
+            
+                    
+                    cmd_amd_es
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../css/布局方面.md">
+            
+                <span>
+            
+                    
+                    css 布局方面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../css/垂直居中.html">
+            
+                <a href="../css/垂直居中.html">
+            
+                    
+                    css 垂直水平居中的不同实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../css/响应式的正方形.html">
+            
+                <a href="../css/响应式的正方形.html">
+            
+                    
+                    css 响应式的正方形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../css/visibility和display引出repain、reflow概念.html">
+            
+                <a href="../css/visibility和display引出repain、reflow概念.html">
+            
+                    
+                    css visibility和display引出repain、reflow概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../css/visibility和display引出repain、reflow概念.html">
+            
+                <a href="../css/visibility和display引出repain、reflow概念.html">
+            
+                    
+                    css repain和reflow的机制（等同于上）👆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../css/BFC概念.html">
+            
+                <a href="../css/BFC概念.html">
+            
+                    
+                    css 里的 BFC 概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" >
+            
+                <span>
+            
+                    
+                    CSS预编译器以及PostCSS的工作原理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" >
+            
+                <span>
+            
+                    
+                    cmd_amd_es
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../html/document.html">
+            
+                <a href="../html/document.html">
+            
+                    
+                    window 和 document 的内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../html/documentFragment.md">
+            
+                <span>
+            
+                    
+                    documentFragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../html/defer-async.html">
+            
+                <a href="../html/defer-async.html">
+            
+                    
+                    script 加载方式  defer  async  vs 普通方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../html/shadowDOM.html">
+            
+                <a href="../html/shadowDOM.html">
+            
+                    
+                    shadow DOM 概念和意义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" >
+            
+                <span>
+            
+                    
+                    cmd_amd_es
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Frame/">
+            
+                <a href="../Frame/">
+            
+                    
+                    框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../Frame/React/">
+            
+                <a href="../Frame/React/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1.1" >
+            
+                <span>
+            
+                    
+                    React setState 全部周期
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" >
+            
+                <span>
+            
+                    
+                    cmd_amd_es
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../functional/">
+            
+                <a href="../functional/">
+            
+                    
+                    函数式编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" >
+            
+                <span>
+            
+                    
+                    函子 functor
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" >
+            
+                <span>
+            
+                    
+                    LINKQ 概念
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" >
+            
+                <span>
+            
+                    
+                    RXJS 的实现
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    杂文
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" >
+            
+                <span>
+            
+                    
+                    前后端分离vs后端生成模版页
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" >
+            
+                <span>
+            
+                    
+                    cookie 和 session 的全面性知识
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" >
+            
+                <span>
+            
+                    
+                    Vue/React/AngularJS 三大框架的绑定更新原理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.4" >
+            
+                <span>
+            
+                    
+                    koa 的洋葱机制为什么是很好的实现？
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.5" >
+            
+                <span>
+            
+                    
+                    shadow DOM 概念和意义?
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.6" >
+            
+                <span>
+            
+                    
+                    immutabble 的基本用法？
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.7" >
+            
+                <span>
+            
+                    
+                    lodash 的基本用法？
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.8" >
+            
+                <span>
+            
+                    
+                    虚拟 dom 对比的算法?
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.9" data-path="../common/小程序和h5的区别.md">
+            
+                <span>
+            
+                    
+                    小程序和h5的区别 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.10" >
+            
+                <span>
+            
+                    
+                    cmd_amd_es
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >js 节流_防抖</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><em>&#x5B66;&#x4E60;&#x638C;&#x63E1;&#x6982;&#x89C8;</em></p>
+<table>
+<thead>
+<tr>
+<th>&#x7B49;&#x7EA7;</th>
+<th>What</th>
+<th>Why</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- [ ] &#x521D;&#x7EA7; [&#x600E;&#x4E48;&#x505A;]</td>
+<td>- [ ] &#x57FA;&#x7840;&#x6982;&#x5FF5;</td>
+<td>- [ ] &#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x5B83;</td>
+<td>- [ ] &#x57FA;&#x672C;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td>- [ ] &#x4E2D;&#x7EA7; [&#x4E3A;&#x4EC0;&#x4E48;]</td>
+<td>- [ ] &#x7C7B;&#x6BD4;&#x6982;&#x5FF5;</td>
+<td>- [ ] &#x5982;&#x679C;&#x6211;&#x4E0D;&#x7528;&#x5B83;&#x5462;</td>
+<td>- [ ] &#x6709;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x7C7B;&#x4F3C;&#x7684;&#x5DE5;&#x5177;&#x6216;&#x65B9;&#x5F0F;&#x5462;</td>
+</tr>
+<tr>
+<td>- [ ] &#x9AD8;&#x7EA7; [&#x81EA;&#x5DF1;&#x7684;]</td>
+<td>- [ ] &#x81EA;&#x5DF1;&#x6982;&#x5FF5;</td>
+<td>- [ ] &#x6709;&#x6CA1;&#x6709;&#x66F4;&#x597D;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5462;&#xFF1F;</td>
+<td>- [ ] &#x5982;&#x679C;&#x662F;&#x81EA;&#x5DF1;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x4F60;&#x4F1A;&#x5982;&#x4F55;&#x505A;&#x5462;&#xFF1F;</td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x5218;&#x5A01;">&#x5218;&#x5A01;</h1>
+<p>&#x6211;&#x60F3;&#x4E86;&#x4E00;&#x4E0B;&#x6211;&#x7684;&#x5B66;&#x4E60;&#x8FC7;&#x7A0B;
+1.&#x662F;&#x4EC0;&#x4E48;
+  1.1&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;
+      1.1.1 &#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;
+      1.1.2 &#x522B;&#x4EBA;&#x662F;&#x600E;&#x4E48;&#x89E3;&#x51B3;&#x7684;
+  1.2 &#x5BF9;&#x4E8E;&#x6211;&#x6709;&#x4EC0;&#x4E48;&#x5E2E;&#x52A9;
+       1.2.1 &#x4F7F;&#x7528;&#x662F;&#x5426;&#x65B9;&#x4FBF;
+       1.2.2 &#x9700;&#x8981;&#x770B;&#x6E90;&#x7801;&#x4E0D;</p>
+<ol>
+<li>&#x6211;&#x81EA;&#x5DF1;&#x8BE5;&#x600E;&#x4E48;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;</li>
+</ol>
+<h1 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;">&#x53C2;&#x8003;&#x6587;&#x7AE0;</h1>
+<blockquote>
+<ul>
+<li><a href="http://www.alloyteam.com/2012/11/javascript-throttle/comment-page-2/" target="_blank">&#x6D45;&#x8C08;javascript&#x7684;&#x51FD;&#x6570;&#x8282;&#x6D41;</a></li>
+<li><a href="https://segmentfault.com/a/1190000008768202" target="_blank">&#x51FD;&#x6570;&#x8282;&#x6D41;&#x4E0E;&#x51FD;&#x6570;&#x9632;&#x6296;</a></li>
+</ul>
+</blockquote>
+<h2 id="&#x5173;&#x952E;&#x8BCD;">&#x5173;&#x952E;&#x8BCD;</h2>
+<p><code>throttle</code>&#x3001;<code>&#x5173;&#x952E;&#x8BCD;3</code>&#x3001;<code>&#x5173;&#x952E;&#x8BCD;4</code></p>
+<p>throttle&#xFF1A; &#x8282;&#x6D41;</p>
+<h1 id="what-&#x1F40E;">What &#x1F40E;</h1>
+<hr>
+<h2 id="&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x57FA;&#x7840;&#x6982;&#x5FF5;&#x662F;&#xFF1F;">&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x57FA;&#x7840;&#x6982;&#x5FF5;&#x662F;&#xFF1F;</h2>
+<blockquote>
+<p>throttle &#x662F;&#x4EC0;&#x4E48;</p>
+</blockquote>
+<ul>
+<li>&#x9884;&#x5148;&#x8BBE;&#x5B9A;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5468;&#x671F;&#xFF0C;&#x89E6;&#x53D1;&#x52A8;&#x4F5C;&#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x6267;&#x884C;&#x5904;&#x7406;&#xFF1B;</li>
+<li>&#x5E94;&#x7528;&#xFF1A;&#x62D6;&#x62FD;</li>
+</ul>
+<p>&#x89E6;&#x53D1;&#x540E;&#xFF0C;&#x56FA;&#x5B9A;&#x4E00;&#x6BB5;&#x65F6;&#x5019;&#x540E;&#xFF0C;&#x624D;&#x6267;&#x884C;&#x67D0;&#x4E2A;&#x51FD;&#x6570;</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// &#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x7684;</span>
+<span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> timeout<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> _time0 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// let args = [...arguments]</span>
+        <span class="token keyword">var</span> args <span class="token operator">=</span> arguments
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> _time0 <span class="token operator">&gt;=</span> timeout <span class="token punctuation">)</span><span class="token punctuation">{</span>
+                fn<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>timeout<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>debounce &#x662F;&#x4EC0;&#x4E48;</p>
+<ul>
+<li>&#x4F18;&#x5316;: &#x6700;&#x540E;&#x4E00;&#x4E2A;&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x624D;&#x6267;&#x884C;&#x8282;&#x6D41;  &#xFF08;&#x5176;&#x5B9E;&#x8FD9;&#x5C31;&#x662F;&#x9632;&#x6296;&#xFF09;</li>
+<li>&#x5E94;&#x7528;&#xFF1A;&#x8F93;&#x5165;&#x540E;&#x7684;keyup &#x3001;</li>
+</ul>
+</blockquote>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> timeId<span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> timeout<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timeId<span class="token punctuation">)</span>
+    <span class="token keyword">let</span> _time0 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// let args = [...arguments]</span>
+        <span class="token keyword">var</span> args <span class="token operator">=</span> arguments
+        timeId <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> _time0 <span class="token operator">&gt;=</span> timeout <span class="token punctuation">)</span><span class="token punctuation">{</span>
+                fn<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> timeout<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x5B83;&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;">&#x5B83;&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;?</h2>
+<blockquote>
+<p>throttle &#x662F;&#x4EC0;&#x4E48;</p>
+<ul>
+<li>&#x89E3;&#x51B3;&#x4E86;&#x9AD8;&#x9891;&#x7387;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x9020;&#x6210;&#x6027;&#x80FD;&#x964D;&#x4F4E;&#x7684;&#x95EE;&#x9898;</li>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+</ul>
+</blockquote>
+<h2 id="&#x5B83;&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">&#x5B83;&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2>
+<blockquote>
+<p>xxx &#x662F;&#x4EC0;&#x4E48;</p>
+</blockquote>
+<ul>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+</ul>
+<h2 id="&#x5B83;&#x7684;&#x7F3A;&#x9677;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">&#x5B83;&#x7684;&#x7F3A;&#x9677;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2>
+<blockquote>
+<p>xxx &#x662F;&#x4EC0;&#x4E48;</p>
+<ul>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+</ul>
+</blockquote>
+<h2 id="&#x5BF9;&#x4E8E;&#x6211;&#x6709;&#x4EC0;&#x4E48;&#x5E2E;&#x52A9;&#xFF1F;">&#x5BF9;&#x4E8E;&#x6211;&#x6709;&#x4EC0;&#x4E48;&#x5E2E;&#x52A9;&#xFF1F;</h2>
+<blockquote>
+<p>xxx &#x662F;&#x4EC0;&#x4E48;</p>
+</blockquote>
+<ul>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+</ul>
+<h1 id="how-&#x1F528;">How &#x1F528;</h1>
+<hr>
+<h2 id="&#x6211;&#x8BE5;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5B83;&#xFF1F;">&#x6211;&#x8BE5;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5B83;&#xFF1F;</h2>
+<blockquote>
+<p>xxx &#x5982;&#x4F55;&#x5B9E;&#x73B0;&#xFF1F;</p>
+</blockquote>
+<ul>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+</ul>
+<h2 id="&#x5B83;&#x7684;&#x7F3A;&#x70B9;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">&#x5B83;&#x7684;&#x7F3A;&#x70B9;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2>
+<h2 id="&#x6709;&#x6CA1;&#x6709;&#x66F4;&#x597D;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5462;&#xFF1F;">&#x6709;&#x6CA1;&#x6709;&#x66F4;&#x597D;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5462;&#xFF1F;</h2>
+<blockquote>
+<p>xxx &#x5982;&#x4F55;&#x5B9E;&#x73B0;&#xFF1F;</p>
+</blockquote>
+<ul>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+</ul>
+<h1 id="why--&#x1F914;">Why  &#x1F914;</h1>
+<hr>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x5B83;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8BE5;&#x95EE;&#x9898;&#xFF1F;">&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x5B83;(&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8BE5;&#x95EE;&#x9898;)&#xFF1F;</h2>
+<blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;</p>
+</blockquote>
+<ul>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+</ul>
+<h2 id="&#x5982;&#x679C;&#x6211;&#x4E0D;&#x7528;&#x5B83;&#x5462;&#xFF1F;">&#x5982;&#x679C;&#x6211;&#x4E0D;&#x7528;&#x5B83;&#x5462;&#xFF1F;</h2>
+<blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;</p>
+</blockquote>
+<ul>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+</ul>
+<h2 id="&#x5982;&#x679C;&#x662F;&#x81EA;&#x5DF1;&#x6765;&#x505A;&#xFF0C;&#x4F60;&#x4F1A;&#x5982;&#x4F55;&#x505A;&#x5462;&#xFF1F;">&#x5982;&#x679C;&#x662F;&#x81EA;&#x5DF1;&#x6765;&#x505A;&#xFF0C;&#x4F60;&#x4F1A;&#x5982;&#x4F55;&#x505A;&#x5462;&#xFF1F;</h2>
+<blockquote>
+<p>&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#xFF1F;</p>
+</blockquote>
+<ul>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+</ul>
+<h2 id="&#x6709;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x7C7B;&#x4F3C;&#x7684;&#x5DE5;&#x5177;&#x6216;&#x65B9;&#x5F0F;&#x5462;&#xFF1F;">&#x6709;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x7C7B;&#x4F3C;&#x7684;&#x5DE5;&#x5177;&#x6216;&#x65B9;&#x5F0F;&#x5462;&#xFF1F;</h2>
+<blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;</p>
+</blockquote>
+<ul>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+<li>&#x5217;&#x51FA;&#x6765;</li>
+</ul>
+<h2 id="&#x7591;&#x60D1;-&#x1F914;">&#x7591;&#x60D1; &#x1F914;</h2>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://www.jianshu.page/" target="_blank">yeyuguo</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x66F4;&#x65B0;&#x4E8E;&#xFF1A; 2019-02-22 14:54:49 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="继承.html" class="navigation navigation-prev " aria-label="Previous page: js 继承">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="js模版引擎.html" class="navigation navigation-next " aria-label="Next page: js模版引擎">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"js 节流_防抖","level":"4.1.4","depth":2,"next":{"title":"js模版引擎","level":"4.1.5","depth":2,"path":"js/js模版引擎.md","ref":"js/js模版引擎.md","articles":[]},"previous":{"title":"js 继承","level":"4.1.3","depth":2,"path":"js/继承.md","ref":"js/继承.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","-search","-lunr","livereload","splitter","include-codeblock","ace","quiz","search-pro","collapsible-menu","prism","highlight","url-embed","page-footer-ex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"livereload":{},"page-footer-ex":{"copyright":"By [yeyuguo](https://www.jianshu.page/)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面更新于："},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"url-embed":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"yeyuguo","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"学习不回头","links":{"sidebar":{"域名在售":"https://www.jianshu.page/","魏双基础知识 合集1":"https://www.zybuluo.com/valsun/note/1318860","魏双基础知识 合集2":"https://www.zybuluo.com/valsun/note/1321468"}},"gitbook":"*"},"file":{"path":"js/节流_防抖.md","mtime":"2019-02-22T06:54:49.652Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-22T11:28:08.712Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

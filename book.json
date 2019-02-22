@@ -1,0 +1,91 @@
+{
+    "title": "学习不回头",
+    "author": "yeyuguo",
+    "links": {
+        "sidebar": {
+            "域名在售": "https://www.jianshu.page/",
+            "魏双基础知识 合集1": "https://www.zybuluo.com/valsun/note/1318860",
+            "魏双基础知识 合集2": "https://www.zybuluo.com/valsun/note/1321468"
+        }
+    },
+    "plugins": [
+        "-sharing",
+        "sharing-plus",
+        "-search",
+        "-lunr",
+        "livereload",
+        "splitter",
+        "include-codeblock",
+        "ace",
+        "quiz",
+        "search-pro",
+        "collapsible-menu",
+        "prism",
+        "highlight",
+        "url-embed",
+        "page-footer-ex"
+    ],
+    "pluginsConfig": {
+        "sharing": {
+            "douban": true,
+            "facebook": true,
+            "google": true,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "facebook",
+                "google",
+                "twitter",
+                "weibo",
+                "qq",
+                "linkedin",
+                "qzone",
+                "douban"
+            ]
+        },
+        "include-codeblock": {
+            "template": "ace",
+            "unindent": true,
+            "edit": false
+        },
+        "quiz": {
+            "labels": {
+                "check": "提交答案",
+                "showExplanation": "显示解释",
+                "showCorrect": "显示正确答案",
+                "explanationHeader": "释义"
+            },
+            "text": {
+                "noChosen": "Choose at least one answer",
+                "incomplete": "Some correct answers are missing"
+            },
+            "buttons": {
+                "showCorrect": true,
+                "showExplanation": true
+            }
+        },
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-solarizedlight.css"
+            ]
+        },
+        "page-footer-ex": {
+            "copyright": "By [yeyuguo](https://www.jianshu.page/)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布",
+            "markdown": true,
+            "update_label": "此页面更新于：",
+            "update_format": "YYYY-MM-DD HH:mm:ss"
+        }
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>requestAnimationFrame 知识点</title>
+</head>
+
+<body>
+    <p>浏览器绘制每帧画面的结尾时，去执行这个回调函数，但不能保证 1000ms/60 内能完成，这个时间只是进入 主线程队列 的一个时间点；</p>
+    <div>
+        <button id="animationStart_requestAnimationFrame">点击(requestAnimationFrame)</button>
+        <button id="animationStop_cancelAnimationFrame">停止(cancelAnimationFrame)</button>
+    </div>
+    <p>这是在 主线程 渲染每帧的结尾空闲时，才会执行 requestIdleCallback 方法</p>
+    <div>
+        <button id="animationStart_requestIdleCallback">点击(requestIdleCallback)</button>
+        <button id="animationStop_cancelIdleCallback">停止(cancelIdleCallback)</button>
+    </div>
+</body>
+<script>
+    let startTime = (new Date()).getTime();
+    var cancleID = null;
+
+    function print(time) {
+        let endTime = (new Date()).getTime()
+        console.log('yes:' + (endTime - startTime))
+        startTime = endTime;
+    }
+
+    document.getElementById('animationStart_requestAnimationFrame').onclick = function () {
+        (function test() {
+            print()
+            cancleID = window.requestAnimationFrame(test)
+        })()
+    }
+    document.getElementById('animationStop_cancelAnimationFrame').onclick = function () {
+        window.cancelAnimationFrame(cancleID)
+    }
+
+
+    document.getElementById('animationStart_requestIdleCallback').onclick = function () {
+        (function test() {
+            print()
+            cancleID = window.requestIdleCallback(test)
+        })()
+    }
+    document.getElementById('animationStop_cancelIdleCallback').onclick = function () {
+        window.cancelIdleCallback(cancleID)
+    }
+
+
+    print(2000)
+</script>
+
+</html>
