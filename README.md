@@ -1,8 +1,15 @@
-![images](/images/gitbook.png)
+![images](/images/logo2.jpeg)
 
 该书的原则：  只学习一遍，不再回头
 坚持发散性思维，把各个技术都 扩展、深入  
 
+
+## 大神外链
+- [魏双大神总结1](https://www.zybuluo.com/valsun/note/1318860)  
+- [魏双大神总结2](https://www.zybuluo.com/valsun/note/1321468)
+
+
+## 如何启动
 本地执行运行 gitbook
 ```sh
 npm install -g gitbook
@@ -14,9 +21,6 @@ gitbook serve // 开发模式
 gitbook build // 发布模式
 ```
 
-## 大神外链
-- [魏双大神总结1](https://www.zybuluo.com/valsun/note/1318860)  
-- [魏双大神总结2](https://www.zybuluo.com/valsun/note/1321468)
 
 ## 求推荐好用的画图工具
 - 画图工具：
