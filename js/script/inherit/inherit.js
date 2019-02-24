@@ -25,7 +25,7 @@ console.log('newCat.say(): ', newCat.say());
 {
     if (!Object.create) {
         Object.create = function (obj) {
-            function F() {}
+            function F() { }
             F.prototype = obj
             return new F()
         }
@@ -35,7 +35,7 @@ console.log('newCat.say(): ', newCat.say());
 // 测试 实现的 Object.create
 
 function testCreate(obj) {
-    function F() {}
+    function F() { }
     F.prototype = obj
     return new F();
 }
@@ -52,7 +52,7 @@ console.log('tt.say() : ', tt.say());
 {
     if (!Object.create) {
         Object.create = function (obj) {
-            function F() {}
+            function F() { }
             F.prototype = obj
             // !已经出错，不能扩展子级属性；
             F.prototype.a = '1'
@@ -115,6 +115,8 @@ console.log('------ starting: ------');
     // ! 5. 优点：是父子类的实例，共享父子类的原型属性
     // todo 缺点： 和 Father.call 一起使用，多调用一次
     // Child.prototype = new Father()
+    // !深思：为什么需要重新把 constructor 更改回来
+    // ! 因为 Child.prototype = ...  更改了原型链的 construtor；  child.constructor == Child // false
     // Child.prototype.construtor = Child
     // end
 

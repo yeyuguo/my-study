@@ -23,13 +23,17 @@ gitbook build // 发布模式
 
 
 ## 求推荐好用的画图工具
-- 画图工具：
+- 画图工具： 
+    * mindmeister
+    * processon
+    * 
 
 ## Doing
+- js 基础类型总结
 - 十大算法
 - css position
 - promise 原理
-- js 基础类型总结
+- webpack 从 0 开始打包配置
 
 ## TODO 
 
