@@ -43,6 +43,10 @@ gitbook build // 发布模式
 
 
 
+* [模版](template2.md)
+
+
+
 * [首页](README.md)
 
 
@@ -73,6 +77,8 @@ gitbook build // 发布模式
 
 
 * [JS](js/README.md)
+    * ❌ [js 类型](js/js类型.md)
+    * ❌ [js 为什么不同实例对象的原型链都指向原对象，修改原型属性，不会影响其他实例对象](js/为什么不同实例对象的原型链都指向原对象，修改原型属性，不会影响其他实例.md)
     * ❌ [js 函数作用域(闭包) vs 块级作用域](js/函数作用域vs块级作用域.md)
     * ❌ [js 的闭包优缺点]()
     * ❌ [js 继承](js/继承.md)
@@ -88,9 +94,7 @@ gitbook build // 发布模式
     * ❌ [promise](js/promise.md)
     * ❌ [call、apply 实现 bind 操作]()
     * ❌ [URL.createObjectURL() 实际操作？]()
-    * ❌ [requestAnimationFrame 该知识点？]()
-    * ❌ [URL.createObjectURL() 实际操作？]()
-    * ❌ [requestAnimationFrame](js/requestAnimationFrame.md)
+    * ✅ [requestAnimationFrame](js/requestAnimationFrame.md)
     * ❌ [Webpack 的打包原理和优化]()
     * ❌ [Node.js 的事件循环机制]()
     * ❌ [JS模块规范 CommonJS、AMD、CMD、UMD的区别]()
@@ -98,11 +102,11 @@ gitbook build // 发布模式
     * ❌ [Babel运行原理]()
     * ❌ [Web端即时通讯技术]()
     * ❌ [冒泡的原理？为什么事件委托代理是利用的冒泡]()
-    * ❌ [querySelector 的集中查询结果对比]()
     * ❌ [静态函数和实例函数的区别]()
     * ❌ [querySelector 的集中查询结果对比](html/querySelector.md)
     * ❌ [函数式编程 vs 声明式编程？]()
     * ❌ [webRTC 原理]()
+    * ❌ [valueOf和toString](js/valueOf和toString.md)
     * ❌ [待新增]()
 
 
@@ -116,6 +120,7 @@ gitbook build // 发布模式
     * ❌ [css repain和reflow的机制（等同于上）👆](css/visibility和display引出repain、reflow概念.md)
     * ❌ [css 里的 BFC 概念](css/BFC概念.md)
     * ❌ [CSS预编译器以及PostCSS的工作原理]()
+    * ❌ [定位](css/定位.md)
     * ❌ [待新增]()
     
 
@@ -161,7 +166,6 @@ gitbook build // 发布模式
     * ❌ [虚拟 dom 对比的算法?]()
     * ❌ [小程序和h5的区别 ](common/小程序和h5的区别.md)
     * ❌ [待新增]()
-
 
 
 
