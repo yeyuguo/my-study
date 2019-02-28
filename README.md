@@ -29,9 +29,10 @@ gitbook build // 发布模式
     * 
 
 ## Doing
+- js 去重复
+- css position
 - js 基础类型总结
 - 十大算法
-- css position
 - promise 原理
 - webpack 从 0 开始打包配置
 
@@ -227,11 +228,14 @@ gitbook build // 发布模式
 > 渲染脚本 markdown 命令  
 
 `
+
 [
     import, 
     theme:"monokai",
     lang:"javascript"
 ](xxx/xxxx.js)
+
+
 `
 
 

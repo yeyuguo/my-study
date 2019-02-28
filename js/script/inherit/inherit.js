@@ -190,3 +190,57 @@ class B extends A {
 
 var bb = new B()
 bb.b()
+
+
+
+//! 如何实现函数的复制？？？？
+
+//  组件继承里，使用 createObj 的实现更改 prototype 的指向,是为了实现函数的复制
+
+{
+    function createObj(obj) {
+        function F() { }
+        F.prototype = obj
+        return new F()
+    }
+
+
+    var A = {
+        name: 'A',
+        b: function () { }
+    }
+    var B = {
+        name: 'B',
+        b: A.b,
+    }
+    // B.b == A.b
+    console.log('B.b == A.b: ', B.b == A.b);
+
+
+    var C = {
+        name: 'C',
+        b: createObj(A.b)
+    }
+    // A.b == C.b
+    console.log('A.b == C.b: ', A.b == C.b);
+
+
+    // 更改 原函数的内容
+    A.b.constructor = A
+    console.log('A.b.constructor.name: ', A.b.constructor.name);
+
+    // 测试 B
+    // B.b.constructor.name
+    console.log('B.b.constructor.name: ', B.b.constructor.name);
+    B.b.constructor = B
+    console.log('B.b.constructor.name: ', B.b.constructor.name);
+
+
+    // 测试 C
+    // C.b.constructor.name
+    console.log('C.b.constructor.name: ', C.b.constructor.name);
+    C.b.constructor = C
+    console.log('C.b.constructor.name: ', C.b.constructor.name);
+
+    //! 思考 🤔 如何解决这里的更改属性，都能更改
+}
