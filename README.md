@@ -29,7 +29,8 @@ gitbook build // 发布模式
     * 
 
 ## Doing
-- js 去重复
+- curry 科里化
+- diff 操作
 - css position
 - js 基础类型总结
 - 十大算法

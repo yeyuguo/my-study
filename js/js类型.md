@@ -13,15 +13,17 @@
 
 > `原始类型`: typeof 可以检测的js 基础类型 (5种)   
 
-Number, String, Boolean, Null, Undefined
+存储位置： 内存 - 栈 - 值; 
+
+Number, String, Boolean, Null, Undefined  
 Symbol(新增)
 
 
 
 > `引用类型`： Object 是引用类型，也称伪复杂类型；     
 
-存储位置： 内存 - 堆 - 指针; 
-详细描述： 栈中存的是堆的地址， 堆中存储的是值,；
+存储位置： 内存 - 栈 - 指针; 
+详细描述： 栈里是引用地址，堆中才是真实值；
 其他引用类型： Function、 Array 、 Date 、 RegExp 
 
   
@@ -37,13 +39,9 @@ Symbol(新增)
 ---
 ## js类型 基础概念是什么？
 **javascript 基础类型由 原始类型 和 引用类型 组成** 
+原始类型：Number, String, Boolean, Null, Undefined、Symbol(新增)
+引用类型：Object 、 Function、 Array 、 Date 、 RegExp
 
-### 基础类型 是什么？
-
-`基础类型`: 除引用类型外，都是基础类型
-存储：内存里 = 栈(值) 
-
-![images](../images/js/基础类型.jpeg)
 
 ### 引用类型 是什么？
 
@@ -56,9 +54,11 @@ Object 、 Function、 Array 、 Date 、 RegExp 等等；
 
 多种引用类型： Object 、 Function、 Array 、 Date 、 RegExp 等等；
 
-详细描述： 堆中存储的是值, 栈里存的是堆中值地址；
+详细描述： 栈里是引用地址，堆中才是真实值；v
 
 ![images](../images/js/引用类型.jpg)
+
+#### 引用类型 Object 
 
 * `Object` 类型： 对象
     * Number、Boolean、String 是 `伪对象`，所以 这3种原始类型有 xxx.toString 一些方法
@@ -71,19 +71,43 @@ Object 、 Function、 Array 、 Date 、 RegExp 等等；
 
 
 ### 伪对象 是什么？
+
 伪对象 一定有 `xxx.toString()` 方法
 
+
+### 伪数组 是什么？
+> arguments 是对象，不是数组
+
+argumetns 转成真实数组
+* `var args = Array.prototype.slice.call(arguments)`
+* `var args = Array.from(arguments)`
+
+#### 引用类型 Array
+> Array 继承于 Object.prototype
+
+`Array instanceof Object ` 说明 Array 由 Object 实例化出来的；
+
+```js
+{
+    var a = [] //  a = new Array()
+    // a.__proto__ == Array.prototype
+    console.log('a.__proto__ == Array.prototype: ', a.__proto__ == Array.prototype);
+    // a.__proto__.__proto__ == Object.prototype
+    console.log('a.__proto__.__proto__ == Object.prototype: ', a.__proto__.__proto__ == Object.prototype);
+}
+
+```
+
+
 ### 原始类型 是什么？
+> 原始类型：除引用类型外，都是基础类型
 
 > Number, String, Boolean, Null, Undefined
 Symbol(新增)
 
+内存： 栈里存储真实值
 
-#### 原始类型详情
-> 原始类型
-Number, String, Boolean, Null, Undefined
-Symbol(新增)
-
+![images](../images/js/基础类型.jpeg)
 
 * `typeof` 运算符： 可以查看 `变量` 属于什么原始类型；  
 
@@ -92,6 +116,7 @@ Symbol(新增)
 
 * `String` 类型： 字符类型
     * 伪对象：一定有 `xxx.toString()` 方法；
+    * new String(x) 返回对象，通过 valueOf 得到真实值；
     * 强类型转换 `String(xxx)`
     * Number、Boolean 是伪对象，所以有 xxx.toString()
     *  **xxx.toString(基模式)**
@@ -106,6 +131,7 @@ Symbol(新增)
 
 * `Number` 类型： 数字类型
     * 伪对象：一定有 `xxx.toString()` 方法；
+    * new Number(x) 返回对象，通过 valueOf 得到真实值；
     * 强类型转换 `Number(xxx)`
     * `NaN == Nan` 为 `true`;
     * 有效值范围
@@ -126,6 +152,7 @@ Symbol(新增)
     * `Number()` 强类型转换
         1. 识别是否为数字字符；
         2. 之后处理类似 parseInt 和 parseFloat；
+    
 
 
         
@@ -133,7 +160,7 @@ Symbol(新增)
 * `Boolean` 类型： 布尔类型
     * 伪对象：一定有 `xxx.toString()` 方法；
     * 强类型转换 `Boolean(xxx)`
-
+    * new Boolean(x) 返回对象，通过 valueOf 得到真实值；
 
 
 

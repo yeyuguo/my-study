@@ -205,11 +205,11 @@ bb.b()
     }
 
 
-    var A = {
+    const A = {
         name: 'A',
         b: function () { }
     }
-    var B = {
+    const B = {
         name: 'B',
         b: A.b,
     }
@@ -217,7 +217,7 @@ bb.b()
     console.log('B.b == A.b: ', B.b == A.b);
 
 
-    var C = {
+    const C = {
         name: 'C',
         b: createObj(A.b)
     }
@@ -243,4 +243,41 @@ bb.b()
     console.log('C.b.constructor.name: ', C.b.constructor.name);
 
     //! 思考 🤔 如何解决这里的更改属性，都能更改
+}
+
+
+
+
+
+
+{
+
+    function Father() {
+        this.name = 'Father name'
+    }
+    Father.prototype.pp = 'pp'
+    function Child() {
+        Father.call(this)
+    }
+    function createObj(obj) {
+        function _F() { }
+        _F.prototype = obj
+        return new _F()
+    }
+    (function () {
+        function _F() { }
+        _F.prototype = Father.prototype
+        Child.prototype = new _F()
+    })()
+
+
+    // Child.prototype = new Father()
+    Child.prototype.constructor = Child
+    var child = new Child()
+    // child.name
+    console.log('child.name: ', child.name);
+    // child.pp
+    console.log('child.pp: ', child.pp);
+    // child.__proto__.constructor.name
+    console.log('child.__proto__.constructor.name: ', child.__proto__.constructor.name);
 }

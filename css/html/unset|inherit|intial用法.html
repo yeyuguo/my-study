@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            color: red;
+        }
+
+        .initail {
+            color: gold;
+        }
+
+        .initail p {
+            color: initial;
+        }
+
+        .inherit {
+            color: blue;
+        }
+
+        .inherit p {
+            color: inherit;
+        }
+
+        .unset {
+            color: green;
+        }
+
+
+        .unset p {
+            color: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <p>This text is red.（普通设置的属性）</p>
+    <div class="initail">
+        <p>initail 属性.（初始化成系统默认颜色）</p>
+    </div>
+    <div class="inherit">
+        <p>inherit 属性.（继承父亲属性）</p>
+    </div>
+    <div class="unset">
+        <p>unset 属性.(继承父亲属性)</p>
+    </div>
+</body>
+
+</html>
