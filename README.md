@@ -5,6 +5,7 @@
 
 
 ## 大神外链
+- [如何学好技术，跪着看完了文章](https://juejin.im/post/5c75d34851882564965edb23)
 - [魏双大神总结1](https://www.zybuluo.com/valsun/note/1318860)  
 - [魏双大神总结2](https://www.zybuluo.com/valsun/note/1321468)
 
