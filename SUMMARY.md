@@ -16,7 +16,7 @@ v# Summary
     * ✅ [tcp 协议过程](common/tcp.md)
     * ✅ [http 的状态 ](common/http.md)
     * ❌ [cookie 和 session 的全面性知识]()
-    * ❌ [xss 和 csrf 方法?](common/安全/webSafe.md)
+    * ✅ [xss 和 csrf 方法?](common/安全/webSafe.md)
     * ❌ [待新增]()
 
 
@@ -36,7 +36,7 @@ v# Summary
 
 
 * [JS](js/README.md)
-    * ❌ [js 类型](js/js类型.md)
+    * ✅ [js 类型](js/js类型.md)
     * ✅ [发布订阅](js/发布订阅.md)
     * ❌ [js 为什么不同实例对象的原型链都指向原对象，修改原型属性，不会影响其他实例对象](js/为什么不同实例对象的原型链都指向原对象，修改原型属性，不会影响其他实例.md)
     * ❌ [js 函数作用域(闭包) vs 块级作用域](js/函数作用域vs块级作用域.md)
@@ -78,8 +78,8 @@ v# Summary
     * ❌ [css 布局方面](css/布局方面.md)
     * ❌ [css 垂直水平居中的不同实现](css/垂直居中.md)
     * ❌ [css 响应式的正方形](css/响应式的正方形.md)
-    * ❌ [css visibility和display引出repain、reflow概念](css/visibility和display引出repain、reflow概念.md)
-    * ❌ [css repain和reflow的机制（等同于上）👆](css/visibility和display引出repain、reflow概念.md)
+    * ✅ [css visibility和display引出repain、reflow概念](css/visibility和display引出repain、reflow概念.md)
+    * ✅ [css repain和reflow的机制（等同于上）👆](css/visibility和display引出repain、reflow概念.md)
     * ❌ [css 里的 BFC 概念](css/BFC概念.md)
     * ❌ [CSS预编译器以及PostCSS的工作原理]()
     * ❌ [定位](css/定位.md)
@@ -104,6 +104,8 @@ v# Summary
 * [框架](Frame/README.md)
     * [React](Frame/React/README.md)
         * ❌ [React setState 全部周期]()
+    * [Vue](Frame/Vue/README.md)
+        * ❌ [vue原理性](Frame/Vue/vue原理性.md)
     * ❌ [待新增]()
 
 
