@@ -115,6 +115,10 @@ gitbook build // 发布模式
 
 
 * [CSS](css/README.md)
+    *  ✅ [三栏布局-table](css/html/三栏布局-table.html)
+    * ✅ [三栏布局-position](css/html/三栏布局-position.html)
+    * ✅ [三栏布局-float](css/html/三栏布局-float.html)
+    * ✅ [三栏布局-羽翼](css/html/三栏布局-羽翼.html)
     * ❌ [css 布局方面](css/布局方面.md)
     * ❌ [css 垂直水平居中的不同实现](css/垂直居中.md)
     * ❌ [css 响应式的正方形](css/响应式的正方形.md)

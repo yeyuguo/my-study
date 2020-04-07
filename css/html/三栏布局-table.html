@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .container {
+            display: table;
+            width: 100%;
+        }
+
+        .left,
+        .main,
+        .right {
+            display: table-cell;
+        }
+        .left{
+            width: 100px;
+            height: 200px;
+            background-color: red;
+        }
+        .main{
+            background-color: green;
+        }
+        .right{
+            width: 100px;
+            height: 200px;
+            background-color: blue;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <!-- 缺点：无法设置栏间距 -->
+    <div class="container">
+        <div class="left"></div>
+        <div class="main"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>
