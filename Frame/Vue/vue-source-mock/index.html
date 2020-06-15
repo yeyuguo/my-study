@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <h1 id="name">{{name}}</h1>
+    <script>
+        var ele = document.querySelector('#name');
+        var selfVue = new SelfVue({name: 'hello world!'}, ele, 'name');
+        setTimeout(function(){
+            selfVue.name = '代理到 data 上的值'
+            // selfVue.data.name = '改变name值'
+        },3000)
+    </script>
+</body>
+</html>
