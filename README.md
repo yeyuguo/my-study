@@ -84,6 +84,8 @@ gitbook build // 发布模式
     * ❌ [js 函数作用域(闭包) vs 块级作用域](js/函数作用域vs块级作用域.md)
     * ❌ [js 的闭包优缺点]()
     * ❌ [js 继承](js/继承.md)
+    * ✅ [js_微任务/宏任务](js/微任务宏任务.md)
+    * ✅ [js_event_loop](js/event-loop.md)
     * ❌ [js 节流_防抖](js/节流_防抖.md)
     * ❌ [js模版引擎](js/js模版引擎.md)
     * ❌ [sizzle dom 操作的实现](js/sizzle.md)
@@ -146,6 +148,8 @@ gitbook build // 发布模式
 * [框架](Frame/README.md)
     * [React](Frame/React/README.md)
         * ❌ [React setState 全部周期]()
+    * [Vue](Frame/Vue/README.md)   
+        * ❌ [Vue实现原理模拟](Frame/Vue/vue-source-mock/index.html)
     * ❌ [待新增]()
 
 
