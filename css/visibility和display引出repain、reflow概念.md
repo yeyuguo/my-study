@@ -1,5 +1,6 @@
 参考文章：
 1. [repain 和 reflow](https://juejin.im/post/5a9923e9518825558251c96a)
+1. [重排和重绘](https://www.cnblogs.com/cencenyue/p/7646718.html)
 2. [浏览器获取属性造成 repain 和reflow的原因](https://juejin.im/post/5a9372895188257a6b06132e)  待测试该参考文章的例子
 3. [visibility 和 display 区别](http://www.jsdaxue.com/archives/29.html)
 4. [cssom 和 dom 合并过程 -> render tree](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=zh-cn)
@@ -24,12 +25,13 @@ display为 none，对其他属性不影响，例如 height，width 等；对其�
 
 
 
+
 ### 为什么？
 >visibility:引起浏览器的 repain 重绘，但不引起 reflow 回流；
 
 >display: 引起浏览器的 repain 和 reflow；
 
-###为什么会有 repain 和 reflow 的存在？
+### 为什么会有 repain 和 reflow 的存在？
 - html -> dom 、css -> cssom  =====> 两者结合成 render tree 渲染树；
 - 回流是：位置、形状变化，或者是浏览器对某些属性进行访问，如 clientHeight 等属性
 - 重绘是：css 对dom进行一些视觉样式的改变，如颜色，背景色等；
@@ -50,10 +52,46 @@ display为 none，对其他属性不影响，例如 height，width 等；对其�
 这个时候浏览器为了获取真实的值就不得不立即flush缓存的队列
 
 
+#### 重绘/重排
+
+渲染树的节点，发生属性变化时候，会触发重绘/重排；
+
+##### 引起重排因素：
+1、页面渲染初始化；(无法避免)
+
+2、添加或删除可见的DOM元素；
+
+3、元素位置的改变，或者使用动画；
+
+4、元素尺寸的改变——大小，外边距，边框；
+
+5、浏览器窗口尺寸的变化（resize事件发生时）；
+
+6、填充内容的改变，比如文本的改变或图片大小改变而引起的计算值宽度和高度的改变；
+
+7、读取某些元素属性：（offsetLeft/Top/Height/Width,　clientTop/Left/Width/Height,　scrollTop/Left/Width/Height,　width/height,　getComputedStyle(),　currentStyle(IE)　)
+
+
 ### 有哪些解决 repain 和 reflow 的方法吗？
-- 尽量减少 style 行内元素操作；
-- 使用 absolute 对复杂动画元素激活，让其脱离文档流，否则引起附近节点的 repain；
-- js对dom操作频繁，可以使用 documentFragment 频繁操作完节点后，再添加到文档里；（可以尽量在vdom 里操作使用）
+
+1、浏览器自己的优化：浏览器会维护1个队列，把所有会引起回流、重绘的操作放入这个队列，等队列中的操作到了一定的数量或者到了一定的时间间隔，浏览器就会flush队列，进行一个批处理。这样就会让多次的回流、重绘变成一次回流重绘。
+
+2、我们要注意的优化：我们要减少重绘和重排就是要减少对渲染树的操作，则我们可以合并多次的DOM和样式的修改。并减少对style样式的请求。
+
+（1）直接改变元素的className, 尽量减少 style 行内元素操作；
+
+（2）display：none；先设置元素为display：none；然后进行页面布局等操作；设置完成后将元素设置为display：block；这样的话就只引发两次重绘和重排；
+
+（3）不要经常访问浏览器的flush队列属性；如果一定要访问，可以利用缓存。将访问的值存储起来，接下来使用就不会再引发回流；
+
+（4）使用cloneNode(true or false) 和 replaceChild 技术，引发一次回流和重绘；
+
+（5）将需要多次重排的元素，position属性设为absolute或fixed，元素脱离了文档流，它的变化不会影响到其他元素；
+
+（6）如果需要创建多个DOM节点，可以使用DocumentFragment创建完后一次性的加入document；
+
+ (7) 使用 absolute 对复杂动画元素激活，让其脱离文档流，否则引起附近节点的 repain；
+
 
 
 ## 渲染树全过程

@@ -1,3 +1,5 @@
+参考文章：   
+- [微任务、宏任务与Event-Loop](https://juejin.im/post/5b73d7a6518825610072b42b)
 
 ## Event Loop  是什么？
 - 是一种程序结构

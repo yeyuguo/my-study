@@ -9,6 +9,7 @@
 
 # 参考文章
 > * [CND 缓存加速](https://blog.csdn.net/luoweifu/article/details/51031099)
+> * [浏览器输入url发生了什么](https://segmentfault.com/a/1190000012092552)
 
 
 # What
@@ -21,6 +22,21 @@
 
 ![image](http://blog.51cto.com/attachment/201203/175333937.jpg)
 
+
+
+## DNS 查询域名IP
+
+![image](https://note.youdao.com/yws/public/resource/4bd870de234909b2da4aafc6507475a2/xmlnote/D81DF9A4910B40AA99675B308743B0B6/51044)
+
+
+从客户端到本地服务器属于递归查询  
+而DNS服务器之间的交互属于迭代查询。  
+
+- 浏览器客户端向本地DNS服务器发送一个含有域名www.cnblogs.com的DNS查询报文。
+- 本地DNS服务器把查询报文转发到根DNS服务器，根DNS服务器注意到其com后缀，于是向本地DNS服务器返回comDNS服务器的IP地址。
+- 本地DNS服务器再次向comDNS服务器发送查询请求，
+- comDNS服务器注意到其www.cnblogs.com后缀并用负责该域名的权威DNS服务器的IP地址作为回应。
+- 最后，本地DNS服务器将含有www.cnblogs.com的IP地址的响应报文发送给客户端。
 
 # Why
 1.为什么需要它？ 
@@ -59,6 +75,7 @@
 
 传统的 DNS 查询请求服务
 ![images](http://sunlogging.com/wp-content/uploads/2016/03/normal.png)
+
 
 2.有没有更好的实现方式呢？
 ---

@@ -56,7 +56,7 @@
 * 第二次：server -> client（server 发送【ACK字段】给 server 确认收到）
 * 第三次：client -> server（client 发送【ACK字段】给 client 确认收到）
 
-![images](https://upload-images.jianshu.io/upload_images/1951625-e00c19e58c179df2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
+![images](https://note.youdao.com/yws/public/resource/d56ea05837e11dbf47311f9696c22858/xmlnote/3C254F24E58A4CEA9A9C155DBAC1ACFB/51050)
 
 ### 三次握手解决了什么问题?
 
@@ -74,7 +74,7 @@
 * 第三次：server -> client (server 再发数据【FIN字段】给 client，主动断开连接)
 * 第四次：client -> server (client 确认收到，再发数据【ACK】给server)
 
-![images](https://upload-images.jianshu.io/upload_images/1951625-60faab3dc458deef.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
+![images](https://note.youdao.com/yws/public/resource/d56ea05837e11dbf47311f9696c22858/xmlnote/1794555D96A04A178FA5DCEDA47AC373/51053)
 
 ### 四次握手解决了什么问题?
 
