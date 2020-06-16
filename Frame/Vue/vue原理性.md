@@ -5,6 +5,7 @@
 # 参考文章
 > * [Vue 路由实现原理](https://zhuanlan.zhihu.com/p/37730038)
 > * [Vue 核心之数据劫持](https://juejin.im/entry/589ff26486b599006b3dea9b)
+> * [Vue 面试问题](https://mp.weixin.qq.com/s/9W7fE5IVEiY2R7RNg7liFg)
 > * [BBB](www)
 
 ## 关键词
@@ -13,6 +14,13 @@
 `关键词1`： 解释  
 
 `关键词2`： 解释  
+
+
+
+ What 🐎 
+---
+## vue2.0 实现原理
+ - 利用 Object.defineProperty 实现响应式；
 
 
 

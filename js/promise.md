@@ -64,7 +64,8 @@ p.then(function(data){
 * promise 建立了 micro task 微任务，在堆列之后、页面渲染之前执行；
 * 可以配合 async 使用；
 * general 实现的原理：  
-    yield 对应出栈 next() 对应入栈
+    yield 对应出栈;  
+    next() 对应入栈
 
 ### 3. 原理 - 它的实现原理是什么？
 > 高度概括解释段落

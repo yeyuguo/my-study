@@ -22,6 +22,7 @@ console.log('newCat.say(): ', newCat.say());
 //3.  实现 Object.create
 // !解释：
 // 该方式，是为了让新生成的构造函数，this 指向 obj
+// 缺点： obj 是引用类型，子类实例共享修改结果；
 {
     if (!Object.create) {
         Object.create = function (obj) {
