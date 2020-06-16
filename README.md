@@ -127,7 +127,7 @@ gitbook build // 发布模式
     * ❌ [css 布局方面](css/布局方面.md)
     * ❌ [css 垂直水平居中的不同实现](css/垂直居中.md)
     * ❌ [css 响应式的正方形](css/响应式的正方形.md)
-    * ❌ [css visibility和display引出repain、reflow概念](css/visibility和display引出repain、reflow概念.md)
+    * ❌ [css visibility和display引出repain、reflow概念/重排/重绘](css/visibility和display引出repain、reflow概念.md)
     * ❌ [css repain和reflow的机制（等同于上）👆](css/visibility和display引出repain、reflow概念.md)
     * ❌ [css 里的 BFC 概念](css/BFC概念.md)
     * ❌ [CSS预编译器以及PostCSS的工作原理]()
