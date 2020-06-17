@@ -70,6 +70,7 @@ gitbook build // 发布模式
     * ❌ [前端性能优化](performance/前端性能优化/README.md)
         * ❌ [海量数据可视化技术及其性能优化]()
         * ✅ [浏览器输入url经历过程](performance/前端性能优化/浏览器输入url.md)
+        * ✅ [vdom虚拟dom](performance/前端性能优化/domDiff/domDiff.md)
     * ❌ [算法类](performance/algorithm/README.md)
         * ❌ [二叉树排序实现？]()
         * ❌ [二叉树:前序遍历(n log n) - 中序遍历( n ) - 后序遍历 (n log n ) 的具体]()
