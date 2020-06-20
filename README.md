@@ -154,6 +154,7 @@ gitbook build // 发布模式
         * ❌ [React setState 全部周期]()
     * [Vue](Frame/Vue/README.md)   
         * ❌ [Vue实现原理模拟](Frame/Vue/vue-source-mock/index.html)
+        * ❌ [vue批量修改机制](Frame/Vue/vue批量修改机制.md)
     * ❌ [待新增]()
 
 

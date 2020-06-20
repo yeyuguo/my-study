@@ -52,6 +52,7 @@ function Watcher(vm, exp, callback){
 }
 Watcher.prototype.get = function(){
     Dep.target = this;
+    // 绑定 watcher 到 响应式 get 里；
     var value = this.vm.data[this.exp] // 该步骤会引起 Object.defineProperty 执行
     Dep.target = null;
     return value

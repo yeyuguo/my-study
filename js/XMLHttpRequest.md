@@ -101,9 +101,13 @@ function isJson(txt,types='Object'){
 ## 它的实现原理是什么？
 
 > xxx 是什么
+readyState 的几个状态
+* unsend = 0 
+* open = 1
+* header_received = 2
+* loading = 3
+* done = 4
 
-* 列出来
-* 列出来
 
 
 ## 它的缺陷是什么？

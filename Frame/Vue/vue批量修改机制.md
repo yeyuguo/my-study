@@ -1,12 +1,11 @@
+
+
 # xxx 学习指南
 **先看教程，再记录  
-切记不能，边看边记录**
+禁忌边看边记录**
 
 # 参考文章
-> * [Vue 路由实现原理](https://zhuanlan.zhihu.com/p/37730038)
-> * [Vue 源码模拟实现](https://www.cnblogs.com/libin-1/p/6893712.html)
-> * [Vue 核心之数据劫持](https://juejin.im/entry/589ff26486b599006b3dea9b)
-> * [Vue 面试问题](https://mp.weixin.qq.com/s/9W7fE5IVEiY2R7RNg7liFg)
+> * [AAA](www)
 > * [BBB](www)
 
 ## 关键词
@@ -18,15 +17,6 @@
 
 
 
- What 🐎 
----
-## vue2.0 实现原理
- - 利用 Object.defineProperty 实现响应式；
-
-
-
-
-
 
 
 
@@ -34,7 +24,6 @@
 
  What 🐎 
 ---
-看山是山
 ## xxx 基础概念是什么？
 > 高度概括解释段落
 
