@@ -165,6 +165,9 @@ gitbook build // 发布模式
     * ❌ [函子 functor]()
     * ❌ [LINKQ 概念]()
     * ❌ [RXJS 的实现]()
+    * ❌ [科里化的实现](functional/currying.js)
+    * ❌ [组合函数的实现](functional/compose.js)
+
 
 
 
