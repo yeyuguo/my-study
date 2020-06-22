@@ -76,6 +76,15 @@ p.then(function(data){
 
 实现 resolve 可以这样
 
+
+[
+    import, 
+    theme:"monokai",
+    lang:"javascript"
+](script/promise.js)
+
+
+
 ```js
 {
     var resolve = function(value){
