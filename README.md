@@ -73,6 +73,8 @@ gitbook build // 发布模式
         * ✅ [vdom虚拟dom](performance/前端性能优化/domDiff/domDiff.md)
     * ❌ [算法类](performance/algorithm/README.md)
         * ❌ [二叉树排序实现？]()
+        * ❌ [红黑树]()
+        * ❌ [快排]()
         * ❌ [二叉树:前序遍历(n log n) - 中序遍历( n ) - 后序遍历 (n log n ) 的具体]()
         * ❌ [js 十大算法](`performance/algorithm/十大算法.md`)
     * ❌ [待新增]()
