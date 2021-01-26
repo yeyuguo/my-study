@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+    /* position、float 实现原理一样，宽度元素变成BFC，剩下元素自动填充内容：*/
     .container{
         position: relative;
         width: 100%;
@@ -37,6 +38,7 @@
     </style>
 </head>
 <body>
+    <!-- position、float 实现原理一样，宽度元素变成BFC，剩下元素自动填充内容 -->
     <!-- 缺点：main 需要申明出具体的高度值  -->
     <div class="container">
         <div class="left"></div>

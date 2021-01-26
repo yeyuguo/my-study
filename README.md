@@ -102,7 +102,7 @@ gitbook build // 发布模式
     * ❌ [迭代器 generater 的实现和操作](js/迭代器.md)
     * ❌ [frezze 的深度用法]()
     * ❌ [promise](js/promise.md)
-    * ❌ [call、apply 实现 bind 操作]()
+    * ❌ [call、apply 实现 bind 操作](js/call-apply-bind.md)
     * ❌ [URL.createObjectURL() 实际操作？]()
     * ✅ [requestAnimationFrame](js/requestAnimationFrame.md)
     * ❌ [Webpack 的打包原理和优化]()
@@ -117,6 +117,7 @@ gitbook build // 发布模式
     * ❌ [函数式编程 vs 声明式编程？]()
     * ❌ [webRTC 原理]()
     * ❌ [valueOf和toString](js/valueOf和toString.md)
+    * ❌ [2020记录总结](2020-summary.md)
     * ❌ [待新增]()
 
 

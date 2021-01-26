@@ -33,7 +33,7 @@ display为 none，对其他属性不影响，例如 height，width 等；对其�
 
 ### 为什么会有 repain 和 reflow 的存在？
 - html -> dom 、css -> cssom  =====> 两者结合成 render tree 渲染树；
-- 回流是：位置、形状变化，或者是浏览器对某些属性进行访问，如 clientHeight 等属性
+- 重排是：位置、形状变化，或者是浏览器对某些属性进行访问，如 clientHeight 等属性
 - 重绘是：css 对dom进行一些视觉样式的改变，如颜色，背景色等；
 - 回流比重绘造成的浏览器成本高！
 

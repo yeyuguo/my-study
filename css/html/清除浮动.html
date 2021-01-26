@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <!-- 参考文章：https://blog.csdn.net/h_qingyi/article/details/81269667 -->
+    <style>
+        /* 1、2 区别在于，display：table 在没有内容时，会独占一行； display：block 没有内容时，不会占有行空间 */
+        .fl{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .fr{
+            float: right;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        /* 第1种方式 */
+        .clear-fix{}
+        .clear-fix::after{
+            content: "";
+            display: block;
+            height: 0;
+            clear:both;
+            visibility: hidden;
+        }
+
+        /* 第2种方式 */
+        .clear-fix2{}
+        .clear-fix2::before,
+        .clear-fix2::after{
+            content: "";
+            display: table;
+        }
+        .clear-fix2::after{
+            clear: both;
+        }
+
+        /* 第3种方式 */
+        .overflow{
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 第1种方式 -->
+    <div class="">
+        <div class="clear-fix">
+            <div class="fl"></div>
+        </div>
+        <div class="main">
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+        </div>
+    </div>
+
+    <!-- 第2种方式 -->
+    <div>
+        <div class="clear-fix2">
+            <div class="fl"></div>
+        </div>
+        <div class="main">
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+        </div>
+    </div>
+
+    <!-- 第3种方式 -->
+    <div>
+        <div class="overflow">
+            <div class="fl"></div>
+        </div>
+        <div class="main">
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+            测试内容测试内容测试内容测试内容测试内容测试内容测试内容
+        </div>
+    </div>
+</body>
+</html>
