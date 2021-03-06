@@ -1,6 +1,7 @@
 # 参考文章
 [http状态码: 不同种类 20?/30?/40?/50?](https://hit-alibaba.github.io/interview/basic/network/HTTP.html)  
-[http状态码: 302 和 303/307的细微差别](https://zhuanlan.zhihu.com/p/60669395)
+[http状态码: 302 和 303/307的细微差别](https://zhuanlan.zhihu.com/p/60669395)   
+[MDN讲解: 访问浏览器, 浏览器发生哪些渲染过程](渲染页面：浏览器的工作原理)
 
 ## 访问一个 url 经历的所有过程
 * DNS 查询

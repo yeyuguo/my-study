@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>测试执行顺序</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js" defer="defer"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.20/lodash.core.min.js" defer="async"></script>
+    <script type="text/javascript" >
+      window.onload = function() {
+        // 所有的dom/图片/flash/script 解析完成才执行
+        console.log('onload:')
+        console.log('jquery:', $)
+        console.log('lodash:', _)
+      }
+      var DOMContentLoaded = function(n) {
+        // DOM树构建完成,才执行该方法
+        // !重点: 但特殊地方是在 defer 和 async 之前执行[script 还未获取完成]
+        console.log('DOMContentLoaded:', n)
+        console.log('jquery:', $)
+        console.log('lodash:', _)
+        return function(){console.log('DOMContentLoaded ' + n)}
+      }
+      document.addEventListener( "DOMContentLoaded", DOMContentLoaded('header'), false )
+    </script>
+</head>
+<body>
+    <div>a</div>
+    <script type="text/javascript" >
+      console.log('a')
+      document.addEventListener( "DOMContentLoaded", DOMContentLoaded('after a'), false )
+    </script>
+    <div>b</div>
+    <script type="text/javascript" >
+      console.log('b')
+      document.addEventListener( "DOMContentLoaded", DOMContentLoaded('after b'), false )
+    </script>
+    <div>c</div>
+
+
+</body>
+</html>

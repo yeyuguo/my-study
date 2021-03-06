@@ -62,7 +62,9 @@ gitbook build // 发布模式
     * ✅ [http 的状态 ](common/http.md)
     * ❌ [cookie 和 session 的全面性知识]()
     * ❌ [xss 和 csrf 方法?](common/安全/webSafe.md)
+    * ❌ [为什么请求被转换 OPTION](common/request-option.md)
     * ❌ [待新增]()
+    * 
 
 
 
@@ -96,7 +98,7 @@ gitbook build // 发布模式
     * ❌ [js模版引擎](js/js模版引擎.md)
     * ❌ [sizzle dom 操作的实现](js/sizzle.md)
     * ❌ [XMLHttpRequest](js/XMLHttpRequest.md)
-    * ❌ [cmd_amd_es](js/cmd_amd_es.md)
+    * ❌ [JS模块规范 CommonJS、AMD、CMD、UMD、ESM](js/cmd_amd_es.md)
     * ❌ [js 变量和函数等在 堆栈 的详细情况]()
     * ❌ [垃圾回收机制？]()
     * ❌ [迭代器 generater 的实现和操作](js/迭代器.md)
@@ -107,7 +109,6 @@ gitbook build // 发布模式
     * ✅ [requestAnimationFrame](js/requestAnimationFrame.md)
     * ❌ [Webpack 的打包原理和优化]()
     * ❌ [Node.js 的事件循环机制]()
-    * ❌ [JS模块规范 CommonJS、AMD、CMD、UMD的区别]()
     * ❌ [export / import 的实现原理方式]()
     * ❌ [Babel运行原理]()
     * ❌ [Web端即时通讯技术]()
@@ -118,6 +119,7 @@ gitbook build // 发布模式
     * ❌ [webRTC 原理]()
     * ❌ [valueOf和toString](js/valueOf和toString.md)
     * ❌ [2020记录总结](2020-summary.md)
+    * ❌ [数字类型](js/number.md)
     * ❌ [待新增]()
 
 
@@ -145,6 +147,7 @@ gitbook build // 发布模式
     * ❌ [window 和 document 的内容](html/document.md)
     * ❌ [documentFragment](html/documentFragment.md)
     * ❌ [script 加载方式  defer  async  vs 普通方式](html/defer-async.md)
+    * ❌ [onload vs DOMContentLoaded vs async vs defer 例子](html/DOMContentLoad.md)
     * ❌ [shadow DOM 概念和意义](html/shadowDOM.md)
     * ❌ [待新增]()
     
