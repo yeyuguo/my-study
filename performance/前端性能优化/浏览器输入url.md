@@ -82,14 +82,14 @@
           * 作为 301 的补充
           * POST 请求不能被改成 GET 请求
         * 304 资源未修改，使用缓存
-          * 条件判断, 有大缺点 (返回头 last-modified 和 请求头 if-modified-since)  
+          * 协商缓存(条件判断), 有大缺点 (返回头 last-modified 和 请求头 if-modified-since)  
             * 优点: 减少响应体的传输,仅仅使用表头信息网络请求, 提高效率
             * 缺点: 使用缓存文件,需要收到服务端的 304 状态,  网络因素会有风险
             * 操作过程: 举例动态页加入缓存机制: 
               * 首次进入: 设置 response header 里有 Last-modify
               * 首次后请求, reqeust header 带有 if-modified-since 字段给服务器判断
               * 如有更新, 返回 200 和最新资源
-          * 非条件判断 (返回头 cache-control 和 返回头 expires )
+          * 强制缓存 (返回头 cache-control 和 返回头 expires )
             * cache-control (主流方案)
               * 值: max-age, 优先级大于 expire, 会覆盖 expire效果
               * 值: no-cache 
@@ -99,7 +99,7 @@
                 * 1. 首次: 返回头 Etag: md5 加密的字符
                 * 2. 下一次请求: 浏览器设置请求头 request header 的 If-None-Match 为上一次 Etag 字符
                 * 3. 服务器对比最新 Etag 和 If-None-Match 值完成更新
-            * cache-control 与 E-tag 对比
+            * **cache-control 与 E-tag 对比**
               * 首次加载: 两者一样;
               * 首次后
                 * E-tag: 如果缓存, 消耗网络资源, 不返回响应体
