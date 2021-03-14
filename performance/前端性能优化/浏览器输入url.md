@@ -1,6 +1,6 @@
 # 参考文章
 [http状态码: 不同种类 20?/30?/40?/50?](https://hit-alibaba.github.io/interview/basic/network/HTTP.html)  
-[http状态码: 302 和 303/307的细微差别](https://zhuanlan.zhihu.com/p/60669395)   
+[http状态码: 301、302 和 303/307的细微差别](https://zhuanlan.zhihu.com/p/60669395)   
 [HTTP缓存（Cache-Control、Expires 、ETag）](https://cloud.tencent.com/developer/article/1359915)  
 [MDN讲解: 访问浏览器, 浏览器发生哪些渲染过程](渲染页面：浏览器的工作原理)  
 [输入url到页面展示详解](https://juejin.cn/post/6931210669991821326)
@@ -65,22 +65,30 @@
     * 同源请求
       * ajax 请求
         * 200 状态
-        * 301 永久重定向
-          * 资源被永久重定向
-          * 303 和 307 的合集
-        * 302 临时重定向
-          * 允许各种重定向
-          * 会把 POST 请求改成 GET 请求
-        * 303 临时重定向
-          * POST 会被改成 GET 方式
-          * 浏览器重定向到 response header 里的 location url 上
-          * 例如: 提交表单, 成功重定向到提示页
-        * 307 临时重定向
-          * 与 302 类似
-          * 不让 POST 改成 GET
-        * 308 永久重定向
-          * 作为 301 的补充
-          * POST 请求不能被改成 GET 请求
+        * 30x
+          * 临时重定向
+            * 302 临时重定向
+              * 允许各种重定向
+              * 会把 POST 请求改成 GET 请求
+            * 303 临时重定向
+              * 会把 POST 会被改成 GET 方式
+              * 浏览器重定向到 response header 里的 location url 上
+              * 例如: 提交表单, 成功重定向到提示页
+            * 307 临时重定向
+              * 与 302 类似
+              * 不让 POST 改成 GET
+          * 永久重定向
+            * 301 永久重定向
+              * 资源被永久重定向
+            * 308 永久重定向
+              * 作为 301 的补充
+              * POST 请求不能被改成 GET 请求
+          * 临时重定向 和 永久重定向 区别
+            * 永久重定向: 新网址完全继承旧网址, 旧网址排名清零
+            * 临时重定向: 新网址不会有排名, 旧网址排名没影响
+          * forward 和 redirect 区别
+            * forward: url 不变化, 内容被被转发
+            * redirect: url 变化, 内容也被转发
         * 304 资源未修改，使用缓存
           * 协商缓存(条件判断), 有大缺点 (返回头 last-modified 和 请求头 if-modified-since)  
             * 优点: 减少响应体的传输,仅仅使用表头信息网络请求, 提高效率
@@ -90,11 +98,15 @@
               * 首次后请求, reqeust header 带有 if-modified-since 字段给服务器判断
               * 如有更新, 返回 200 和最新资源
           * 强制缓存 (返回头 cache-control 和 返回头 expires )
-            * cache-control (主流方案)
+            * expire (历史方案)
+              * 与 cache-control 功能类似
+              * 缺点: 浏览器时间和服务器时间差异大会有问题
+            * cache-control (主流方案)ing
               * 值: max-age, 优先级大于 expire, 会覆盖 expire效果
               * 值: no-cache 
             * E-tag:
               * 作用: 检测资源内容是否改变
+              * Etag(response header ) 、 if-None-match (request header) 
               * 实现: 
                 * 1. 首次: 返回头 Etag: md5 加密的字符
                 * 2. 下一次请求: 浏览器设置请求头 request header 的 If-None-Match 为上一次 Etag 字符
@@ -104,9 +116,6 @@
               * 首次后
                 * E-tag: 如果缓存, 消耗网络资源, 不返回响应体
                 * cache-control: 如果缓存, 客户端浏览器不发起请求;
-            * expire (历史方案)
-              * 与 cache-control 功能类似
-              * 缺点: 浏览器时间和服务器时间差异大会有问题
           * 如何实现不缓存
             * 一个是清空请求头 request header
             * 另一个是返回头 response header 使用 no-cache 表头
