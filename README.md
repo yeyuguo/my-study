@@ -74,10 +74,12 @@ gitbook build // 发布模式
         * ✅ [浏览器输入url经历过程](performance/前端性能优化/浏览器输入url.md)
         * ✅ [vdom虚拟dom](performance/前端性能优化/domDiff/domDiff.md)
     * ❌ [算法类](performance/algorithm/README.md)
-        * ❌ [二叉树排序实现？]()
+        * ❌ [快排]()
+        * ❌ [散列表(哈希表)](performance/algorithm/hash.md)
+        * ✅ [实现一个栈](performance/algorithm/stack.js)
+        * ❌ [二叉树排序实现？](performance/algorithm/binaryTree/binaryTree.md)
         * ❌ [红黑树]()
         * ❌ [快排]()
-        * ❌ [二叉树:前序遍历(n log n) - 中序遍历( n ) - 后序遍历 (n log n ) 的具体]()
         * ❌ [js 十大算法](`performance/algorithm/十大算法.md`)
     * ❌ [待新增]()
 
@@ -89,7 +91,7 @@ gitbook build // 发布模式
 * [JS](js/README.md)
     * ❌ [js 类型](js/js类型.md)
     * ❌ [js 为什么不同实例对象的原型链都指向原对象，修改原型属性，不会影响其他实例对象](js/为什么不同实例对象的原型链都指向原对象，修改原型属性，不会影响其他实例.md)
-    * ❌ [js 函数作用域(闭包) vs 块级作用域](js/函数作用域vs块级作用域.md)
+    * ✅  [js 函数作用域(闭包) vs 块级作用域](js/函数作用域vs块级作用域.md)
     * ❌ [js 的闭包优缺点]()
     * ❌ [js 继承](js/继承.md)
     * ✅ [js_微任务/宏任务](js/微任务宏任务.md)
@@ -189,6 +191,8 @@ gitbook build // 发布模式
     * ❌ [lodash 的基本用法？]()
     * ❌ [虚拟 dom 对比的算法?]()
     * ❌ [小程序和h5的区别 ](common/小程序和h5的区别.md)
+    * ❌ [面试题记录](common/面试题目收集.md)
+    * ❌ [正则表达式](common/正则表达式.md)
     * ❌ [待新增]()
 
 

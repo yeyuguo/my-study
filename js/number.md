@@ -1,5 +1,5 @@
 # 参考文章
-[AAA](www)  
+[IEEE 754标准(浮点数的计算不准确原因)](https://www.jianshu.com/p/7c636d8f18d5)  
 [BBB](www)  
 
 ## 关键词

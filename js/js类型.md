@@ -29,14 +29,16 @@ Symbol(新增)
   
 > `伪对象`： 具有 object 的属性；
 
-> `伪数组`： 具有 argument 的索引值, 但不能使用其原型上的方法
-
-伪数组： argument 、 document.getElementsByClass 
-
+> `伪数组`: 具有 argument 的索引值, 但不能使用其原型上的方法
 
 # What 🐎
 
 ---
+
+## 伪数组
+
+
+
 ## js类型 基础概念是什么？
 **javascript 基础类型由 原始类型 和 引用类型 组成** 
 原始类型：Number, String, Boolean, Null, Undefined、Symbol(新增)
@@ -70,17 +72,38 @@ Object 、 Function、 Array 、 Date 、 RegExp 等等；
         ```
 
 
-### 伪对象 是什么？
+### 伪数组
+> 是什么?
+* 具有 argument 可迭代的索引值, 但没有原型上的方法
+* 伪数组例子： argument 、 document.getElementsByClass
 
-伪对象 一定有 `xxx.toString()` 方法
-
-
-### 伪数组 是什么？
-> arguments 是对象，不是数组
-
-argumetns 转成真实数组
+> arguments 转成真实数组
 * `var args = Array.prototype.slice.call(arguments)`
 * `var args = Array.from(arguments)`
+> 伪数组 arguments 有什么属性?
+ * arguments.length: 参数类型
+ * arguments.callee: 执行的函数自身
+
+> arguements 作用域细节
+```js
+// https://www.jianshu.com/p/d7ed5ade67a3
+var length = 10
+function fn(){
+    console.log(this.length)
+}
+
+var obj = {
+    method: function(fn) {
+        fn()
+        arguments[0]()
+    }
+}
+
+obj.method(fn, 1)
+// 10
+// 2
+```
+
 
 #### 引用类型 Array
 > Array 继承于 Object.prototype
@@ -207,101 +230,5 @@ Symbol(新增)
     typeof Date(); // object
     typeof RegExp(); // object
     ```
-
-    
-
-## 它的实现原理是什么？
-
-> 基础类型 是什么
-
-* 列出来
-* 列出来
-
-
-## 它的缺陷是什么？
-
-> xxx 是什么
-* typeof null 是 object
-
-
-
-
-## 对于我有什么帮助？
-> xxx 是什么
-
-* 列出来
-* 列出来
-
-
-
-
-# How 🔨
-
----
-## 我该如何使用它？
-> xxx 如何实现？
-
-* 列出来
-* 列出来
-
-
-## 它的缺点是什么？
-
-
-## 有没有更好的实现方式呢？
-> xxx 如何实现？
-
-* 列出来
-* 列出来
-
-
-
-
-# Why  🤔
----
-## 为什么需要它(为什么会有该问题)？ 
-> 为什么
-
-* 列出来
-* 列出来
-
-
-
-
-
-## 如果我不用它呢？
-> 为什么
-
-* 列出来
-* 列出来
-
-
-
-## 如果是自己来做，你会如何做呢？
-> 如何实现？
-
-* 列出来
-* 列出来
-
-
-
-## 有没有什么类似的工具或方式呢？
-> 为什么
-
-* 列出来
-* 列出来
-
-
-## 疑惑 🤔
-
-
-
-## 学习掌握概览
-
-等级 | What        | Why                   | How
----|---     | ---                   | ---
-- [ ] 初级 [怎么做] | - [ ] 基础概念 | - [ ] 为什么需要它             | - [ ] 基本使用
-- [ ] 中级 [为什么] | - [ ] 类比概念 | - [ ] 如果我不用它呢           | - [ ] 有没有什么类似的工具或方式呢
-- [ ] 高级 [自己的] | - [ ] 自己概念 | - [ ] 有没有更好的实现方式呢？ | - [ ] 如果是自己来实现，你会如何做呢？
 
 

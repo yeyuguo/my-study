@@ -52,76 +52,7 @@ javascript 调用： document.queryxxx
 常用接口是： window、location、history、screen 等信息；   
 javascript 调用： window.xxx  
 
-
-> #### 事件传递【重点】  
-[参考文章](https://www.cnblogs.com/Chen-XiaoJun/p/6210987.html)  
-
-##### 基本概念  
-有事件作用于节点时，有 冒泡流【IE提出】 或 捕获【网景提出】；  
-w3c 同时兼容两种事件流，早期IE浏览器只有冒泡； 
-
-在绑定的一个事件里，只会发生其中一个事件流；
-
-##### 事件会经历3个阶段：  
-- 捕获： 从上往下，从 window 向下捕获： event.target，到达目标元素；  
-- 到达目标元素： 事件已达到目标元素；  
-- 冒泡： 从下往上，从当前元素向父节点不断传递；
-
-最后还回到起点 window
-
-##### 事件的绑定js实现【捕获/冒泡】
-- onclick: 所有浏览器保持统一，只有冒泡，旧事件会被替代；  
-- addEventListener: 可以自由设置 捕获 或 冒泡；缺点是早期 IE 只有冒泡；
-
-因为根据 addEventListener 的第三个参数只能是二选一；  
-
-**addEventListener方法具有第三个可选参数 useCapture**  
-其默认值为false，事件将在 `冒泡阶段`中发生;  
-如果为true，则事件将在 `捕获阶段` 中发生。
-
-
-##### e.target 和 e.currentTarget 区别？
-**e.target** : 目标元素；  
-**e.currentTarge**: 冒泡/捕获 阶段的执行元素；
-
-##### 委托事件是根据什么事件流实现的？
-
-是根据冒泡，自下而上，在最上层的元素上绑定事件，统一处理；    
-
-优点： 解决性能问题，减少绑定多个事件的大小占用的优点；
-
-
-##### 目标元素执行顺序是不是按照 事件阶段 顺序？？？？？
-不会严格按照 捕获 - 到达目标 - 冒泡 的顺序来处理；  
-真实情况： 目标元素的执行顺序，是按照绑定的顺序处理的；【参考文章里有案例，先绑定在什么阶段就会先执行】   
-真实业务里，如果一个元素绑定了两次事件，执行的顺序至关重要，需要知道这个知识点；   
-
-##### 如何阻止冒泡？
-- addEventListener: 使用 e.stopPropagation 都能阻止 捕获/冒泡；
-
-特点： stopPropagation 在同一个元素绑定多个事件时，stopPropagation **执行后会阻止掉该元素其他绑定事**件；【**具体阻止哪些，和事件阶段绑定顺序有关系** 】
-
-
-##### 如何阻止默认行为？
-- return e.preventDefault    标准技术
-- return e.returnValue     早期IE的
-- return false 阻止对象属性的事件【onclick 绑定事件】
-
-```js
-function cancelHandler(event){
-    var event=event||window.event;//兼容IE
-    
-    //取消事件相关的默认行为
-    if(event.preventDefault)    //标准技术
-        event.preventDefault();
-    if(event.returnValue)    //兼容IE9之前的IE
-        event.returnValue=false;
-    return false;    //用于处理使用对象属性注册的处理程序
-}
-```
-
-
-
+j
 
 ### 作用域
 > 作用域分类？
@@ -192,6 +123,9 @@ console.log(a)
 
 var test = {
     name: 'test',
+    fn: function() {
+        console.log(this.name)
+    }
 }
 
 var obj = {
@@ -225,7 +159,8 @@ Function.prototype.myCall2 = function(){
     console.log({args})
     var func = arguments[0]
     func._fn_ = this;
-    eval('func._fn_('+eval(args)+')')
+    eval('func._fn_('+eval(args)+')') 
+    // 等价: eval('func._fn_('+ args.join(',') +')') 
     delete func._fn_;
 }
 
@@ -258,7 +193,7 @@ newFunc('bind test');
 
 - 理解 this 作用域范围；
 - 闭包： 只会保存执行当前的作用域；
-- 变更作用域（apply、call) 函数应用；
+- 变更作用域（apply、call、bind) 函数应用；
 - todo 其他作用？？？？？
 
 ```js
@@ -281,7 +216,7 @@ func() // foo 等价于 window.func();
 #### IIFE 对作用域有什么作用？
 
 - 封闭函数的作用域，为每一次的闭包创建新的作用域；
-- 保存执行结果；
+- 模拟 es6 的块级作用域, 能保存执行结果；
 - 性能较好（没有原型链的引用）；
 
 

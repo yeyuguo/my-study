@@ -8,6 +8,11 @@
 * [Vue 核心之数据劫持](https://juejin.im/entry/589ff26486b599006b3dea9b)
 * [Vue 面试问题](https://mp.weixin.qq.com/s/9W7fE5IVEiY2R7RNg7liFg)  
 * [vue2 的 data 为什么是函数?](https://zhuanlan.zhihu.com/p/259204617)  
+* [js 引用类型 构造函数 实例 引用类型方法 对象方法 原型的概述](https://my.oschina.net/sallency/blog/552534)
+* [为什么原型上的引用类型会影响实例?](https://www.cnblogs.com/fogwind/p/5750764.html)
+* [vue3 响应式原理 与 vue2 响应式的对比](https://www.cnblogs.com/yf-html/p/13917215.html)
+* [vue2 的 Object.defineProperty 的属性变化](https://youngzhang08.github.io/2018/07/30/%E4%B8%BA%E4%BB%80%E4%B9%88defineProperty%E4%B8%8D%E8%83%BD%E6%A3%80%E6%B5%8B%E5%88%B0%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6%E7%9A%84%E5%8F%98%E5%8C%96/)  
+
 
 ## 关键词
 **vue2**、**构造函数**、**原型**、**引用类型**
@@ -56,6 +61,33 @@ p2.obj.a  // 2
 
 
 
-## js 原型属性 和 自身(实例)属性 区别?  
+### js 原型属性 和 自身(实例)属性 区别?  
 
 
+
+
+## vue computed 为什么能缓存和响应式?
+computed的计算属性有缓存机制，只有当其依赖的响应式数据发生变化时才会清空缓存重新计算结果
+
+1. 其缓存机制本质是通过一个dirty属性控制的，只有dirty为true时才会重新计算结果替换缓存。
+2. dirty只有当其响应式数据发送变化时才会设置为true，重新计算后会再次被设置为false
+
+
+
+
+## vue2 为什么不能对数组和对象进行响应式监听?
+```js
+function obs(target, key, value) {
+    return new Proxy(target, {
+      get(target, key, receive) {
+        // todo
+        // const 
+      }
+    })
+
+}
+
+```
+
+
+## vue3 的实现原理?
