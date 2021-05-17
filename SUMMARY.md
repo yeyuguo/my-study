@@ -43,7 +43,7 @@ v# Summary
     * ❌ [js 的闭包优缺点]()
     * ❌ [js 继承](js/继承.md)
     * ❌ [js 节流_防抖](js/节流_防抖.md)
-    * ❌ [js模版引擎](js/js模版引擎.md)
+    * ❌ [js模版渲染](js/script/js模版渲染.js)
     * ❌ [sizzle dom 操作的实现](js/sizzle.md)
     * ❌ [XMLHttpRequest](js/XMLHttpRequest.md)
     * ❌ [cmd_amd_es](js/cmd_amd_es.md)

@@ -18,6 +18,18 @@
   * 解析表头
     * 资源类型
     * 是否压缩
+    * 发起请求(资源、接口)
+      * 跨域
+        * 简单请求
+        * 复杂请求(主要区别:涉及预请求)
+          * 原因cors-preflight: 为了提高性能, 客户端默认阻止请求到达服务端 
+            * 1. 浏览器自动发起; 
+            * 2. 服务端如果允许跨域, 需要明确写 method.OPTIONS 的判断逻辑, 否则默认服务端不允许跨域
+          * 如何触发?
+            * 请求方法是GET、POST、HEAD其中任意一个
+            * 必须是下面定义对CORS安全的首部字段集合，不能是集合之外的其他首部字段: Accept、 Accept-Language、Content-Language、Content-Type、DPR、Downlink、Save-Data、Viewport-Width、Width。
+            * Content-Type的值必须是text/plain、multipart/form-data、application/x-www-form-urlencoded中任意一个值
+      * 非跨域: 直接请求
     * 请求状态
       * 20?
         * 200 正常请求

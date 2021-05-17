@@ -47,6 +47,7 @@ gitbook build // 发布模式
 
 
 
+
 * [模版](template2.md)
 
 
@@ -97,7 +98,7 @@ gitbook build // 发布模式
     * ✅ [js_微任务/宏任务](js/微任务宏任务.md)
     * ✅ [js_event_loop](js/event-loop.md)
     * ❌ [js 节流_防抖](js/节流_防抖.md)
-    * ❌ [js模版引擎](js/js模版引擎.md)
+    * ❌ [js模版渲染](js/js模版渲染.md)
     * ❌ [sizzle dom 操作的实现](js/sizzle.md)
     * ❌ [XMLHttpRequest](js/XMLHttpRequest.md)
     * ❌ [JS模块规范 CommonJS、AMD、CMD、UMD、ESM](js/cmd_amd_es.md)
@@ -259,17 +260,16 @@ gitbook build // 发布模式
 
 > 渲染脚本 markdown 命令  
 
-`
 
-[
-    import, 
-    theme:"monokai",
-    lang:"javascript"
-](xxx/xxxx.js)
+引入js文件
 
-
-`
-
-
+```
+`[
+    import : 16-30, 
+    js模版渲染.js,
+    lang:"javascript",
+    theme:"monokai"
+](script/js模版渲染.js)`
+```
 
 

@@ -10,9 +10,7 @@ console.log(str)//输出2017-09-21
 原文：https://blog.csdn.net/susiwen8/article/details/82701235 
 版权声明：本文为博主原创文章，转载请附上博文链接！ */
 
-// <% year %>
 
-//! [marker0]
 function render(str, obj) {
     str = str.replace(/ /g, '');
     const reg = /(\w|\d|\s|\_)+(?=%>)/g
@@ -25,9 +23,27 @@ function render(str, obj) {
 var data = {
     year: 10
 }
-//! [marker0]
 
 // render("<% year %>", data)
-//! [marker1]
 console.log('render("<% year %>", data): ', render("<% year %>", data));
-//! [marker1]
+
+
+
+/** vue2 模版渲染 */
+function render(template, data) {
+  const reg = /\{\{(\w+)\}\}/
+  if(reg.test(template)) {
+    const variableName = reg.exec(template)
+    let replaceVariable = template.replace(reg, data[variableName[1]])
+    return render(replaceVariable, data)
+  }
+  return template
+}
+
+var template = '我是{{name}}，年龄{{age}}，性别{{sex}}'
+var result = render(template, {
+  name: 'ye', 
+  age: 30, 
+  sex: '男'
+})
+console.log('result: ', result);
